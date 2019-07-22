@@ -11,11 +11,12 @@ Recursos para reutilizar em outros projetos
        - Html 
        - JavaScript
        - DOM
+       - Mysql (Developer Server)
        - Request
        - Express
        - Handlebars
        - Body Parser
-       - Sequelize
+       - Sequelize (Mysql)
        - FidelidadeServiceApi
        
 
