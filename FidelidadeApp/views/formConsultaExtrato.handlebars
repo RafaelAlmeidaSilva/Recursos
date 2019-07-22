@@ -1,0 +1,130 @@
+<div class="container row ">
+      <center><h1 class="text-center" style="color:blueviolet;">Fidelidade Service </h1></center>
+</div>
+<div class="row col-md-12 " style="  background: blueviolet;
+            color : white;
+            opacity: 1;
+            border-radius: 5px;">
+        <form class="form-horizontal col-md-6" action="/ConsultaExtrato" method="POST">
+            
+            <fieldset>
+               <!-- Form Name -->
+            <legend class="text-center">Consulta Extrato</legend>
+            </fieldset>
+            <fieldset>
+           
+        
+            <!-- Text input-->
+            <div class="form-group col-md-12">
+              <label class="col-md-6 control-label" for="textinput">Chave Integracao:</label>  
+              <div class="col-md-12">
+                <input id="idChaveIntegracao" maxlength="36" name="txtChaveIntegracao" onkeyup="maskChaveIntegracao()" style="text-transform:uppercase;" type="text" placeholder="4B335B6F-9C4D-47F7-B798-C46FFBC4881A" class="form-control input-md" autofocus required>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <!-- Text input-->
+            <div class="form-group col-md-12">
+              <label class="col-md-6 control-label" for="textinput">Código Loja:</label>  
+              <div class="col-md-12">
+                <input id="textinput" name="txtCodigoLoja" type="number" placeholder="Ex: 1" class="form-control input-md" autofocus required>
+               
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <!-- Text input-->
+            <div class="form-group col-md-12">
+              <label class="col-md-6 control-label" for="textinput">Número Cartao:</label>  
+              <div class="col-md-12">
+                <input id="textinput" name="txtNumeroCartao" type="number" placeholder="32231126850" class="form-control input-md" autofocus required>
+              
+              </div>
+            </div>
+          </fieldset> 
+        <fieldset class="col-md-12">
+            <!-- Button -->
+            <div class="row col-md-11 ">
+                <div class="col-md-10"></div>
+                <div class="form-group col-md-1">
+                    <div class="col-md-12">
+                      <button type="submit" id="idBtnConsultar" href="/ConsultaExtrato" name="btnConsultar" class="btn btn-primary float-right">Consultar</button>
+                    </div>
+                </div>
+      
+            </div>
+           
+            
+          </fieldset> 
+        </form>
+        
+        <style>
+        
+        </style>
+        <div class="container col-md-6" style="  background: black;
+            color : white;
+            opacity: 0.6;
+            border-radius: 5px;">
+          
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+      
+                <div class="container">
+                      <div class="row col-md-12">
+                          <div class="col-md-3"></div>
+                          <h4>Pontos:  {{pontos}} pt</h4>
+                      </div>
+                      <br>
+                      
+                      <div class="row col-md-12">
+                          <div class="col-md-3"></div>
+                           <h4>Saldo:  R$  {{saldo}}</h4>
+                      </div>
+      
+                      <div class="row col-md-12">
+                          <div class="col-md-3"></div>
+                          <h6> NSU:  {{nsu}}</h6>
+                       </div> 
+                </div>
+            </div>
+      </div>
+</div>
+
+	<script>
+    function maskChaveIntegracao() {
+      var x = document.getElementById("idChaveIntegracao").value;
+      //4B335B6F
+      //-
+      //9C4D
+      //-
+      //47F7
+      //-
+      //B798
+      //-
+      //C46FFBC4881A
+      //RRRRRRRRRRRRR
+      if(x.length == 8 ){
+
+       document.getElementById("idChaveIntegracao").value = x + "-";
+      }
+
+      if(x.length == 13 ){
+
+       document.getElementById("idChaveIntegracao").value = x + "-";
+      }
+      
+      if(x.length == 18 ){
+
+       document.getElementById("idChaveIntegracao").value = x + "-";
+      }
+      
+      if(x.length == 23 ){
+
+       document.getElementById("idChaveIntegracao").value = x + "-";
+      }
+    }
+
+  </script>
