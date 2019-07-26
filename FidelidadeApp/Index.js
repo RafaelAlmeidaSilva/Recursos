@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var handleBars = require('express-handlebars');
 var bodyParser = require('body-parser');
+const helmet = require('helmet');
+app.use(helmet());
 // Body Parser
 // config
 app.use(bodyParser.urlencoded({extended:false}))
